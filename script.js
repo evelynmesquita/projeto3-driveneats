@@ -91,9 +91,9 @@ function selecionarSobremesa(botaoSobremesa){
 /***********BOTAO FINALIZAR PEDIDO - IR TELA BONUS************ */
 
 function continuar() {
-    let totalPratos = document.getElementsByClassName('selecionado').length    
-    let botaoDesativado = document.querySelector('.botao-confirma')
-    let botaoAtivo = document.querySelector('.habilitado')
+    const totalPratos = document.getElementsByClassName('selecionado').length    
+    const botaoDesativado = document.querySelector('.botao-confirma')
+    const botaoAtivo = document.querySelector('.habilitado')
     
     if(totalPratos === 6) {
        botaoDesativado.classList.add('hideButton')
