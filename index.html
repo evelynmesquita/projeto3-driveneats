@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <title>DrivenEats</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="head">
+      <div class="drivenEats">
+        <div class="title">
+          <h1>DrivenEats</h1>
+        </div>
+        <div class="subtitle">
+          <p>Sua comida em 6 minutos</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="title-prato">
+        <h2>Primeiro, seu prato</h2>
+      </div>
+      <div class="pratos comida">
+        <div  data-test="dish" class="prato-principal1" onclick="selecionarPrato(this)">
+          <div class="prato-div">
+            <img src="media/onion.webp" alt="" srcset="">
+            <div class="descricao-prato check">
+              <h3 data-test="item-name">Blooming Onion</h3>
+              <p>Dourada e autêntico sabor do Outback.</p>
+              <h4 data-test="item-price">R$ 49,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div  data-test="dish" class="prato-principal2" onclick="selecionarPrato(this)">
+          <div class="prato-div">
+            <img src="media/kokaburra.jfif" alt="" srcset="">
+            <div class="descricao-prato">
+              <h3 data-test="item-name">Kookaburra Wings</h3>
+              <p>10 sobreasas de frango empanadas</p>
+              <h4 data-test="item-price">R$ 59,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div data-test="dish" class="prato-principal3" onclick="selecionarPrato(this)">
+          <div class="prato-div">
+            <img src="media/batata.jpg" alt="" srcset="">
+            <div class="descricao-prato">
+              <h3 data-test="item-name">Cheese Fries</h3>
+              <p>Nossas fritas com muito molho!</p>
+              <h4 data-test="item-price">R$ 39,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="title-prato2">
+        <h2>Agora, sua bebida</h2>
+      </div>
+      <div class="pratos bebida">
+        <div data-test="drink" class="bebida1" onclick="selecionarBebida(this)">
+          <div class="prato-div">
+            <img src="media/coca-cola.png" alt="" srcset="">
+            <div class="descricao-prato">
+              <h3 data-test="item-name">Coca-Cola Lata</h3>
+              <p>Lata 350ml</p>
+              <h4 data-test="item-price">R$ 4,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div data-test="drink" class="bebida2" onclick="selecionarBebida(this)">
+          <div class="prato-div">
+            <img src="media/chopp.webp" alt="" srcset="">
+            <div class="descricao-prato">
+              <h3 data-test="item-name">Chopp Outback</h3>
+              <p>500ml</p>
+              <h4 data-test="item-price">R$ 11,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div data-test="drink" class="bebida3" onclick="selecionarBebida(this)">
+          <div class="prato-div">
+            <img src="media/pink-lemonade-00.webp" alt="" srcset="">
+            <div class="descricao-prato">
+              <h3 data-test="item-name">Pink Lemonade</h3>
+              <p>350ml</p>
+              <h4 data-test="item-price">R$ 10,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="title-prato3">
+        <h2>Por fim, sua sobremesa</h2>
+      </div>
+      <div class="pratos sobremesa">
+        <div data-test="dessert" class="sobremesa1" onclick="selecionarSobremesa(this)">
+          <div class="prato-div">
+            <img src="media/pudim.png" alt="" srcset="">
+            <div class="descricao-prato">
+              <h3 data-test="item-name">Pudim</h3>
+              <p>Pudim cremoso!</p>
+              <h4 data-test="item-price">R$ 7,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div data-test="dessert" class="sobremesa2" onclick="selecionarSobremesa(this)">
+          <div class="prato-div">
+            <img src="media/brownie.webp" alt="" srcset="">
+            <div class="descricao-prato">
+              <h3 data-test="item-name">Brownie</h3>
+              <p>Brownie perfeito!</p>
+              <h4 data-test="item-price">R$ 11,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div data-test="dessert" class="sobremesa3" onclick="selecionarSobremesa(this)">
+          <div class="prato-div">
+            <img src="media/sorvete.webp" alt="" srcset="">
+            <div class="descricao-prato">
+              <h3 data-test="item-name">Sorvete</h3>
+              <p>Muito saboroso</p>
+              <h4 data-test="item-price">R$ 12,90</h4>
+              <ion-icon name="checkmark-circle" class="icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="telaConfirmaPedido hidden">
+      <div data-test="confirm-order-modal" class="enviarPedidos">
+        <h3>Confirme seu pedido</h3>
+        <div class="confirmaPrato">
+          <span class="nomePrato">Frango Yin Yang</span>
+          <p class="precoPrato">14,90</p>
+        </div>
+        <div class="confirmaBebida">
+          <span class="nomeBebida">Frango Yin Yang</span>
+          <p class="precoBebida">14,90</p>
+        </div>
+        <div class="confirmaSobremesa">
+          <span class="nomeSobremesa">Frango Yin Yang</span>
+          <p class="precoSobremesa">14,90</p>
+        </div>
+        <div class="confirmaTotal">
+          <span>TOTAL</span>
+          <p class="precoTotalPedido">14,90</p>
+        </div>
+        <div class="botaoConfirmaPedido">
+          <button data-test="confirm-order-btn" class="botaoConfirmaBonus" onclick="finalizarPedido()">Tudo certo, pode pedir!</button>
+        </div>
+        <div>
+          <button data-test="cancel-order-btn" class="cancelarPedido" onclick="botaoCancelarPedido()">Cancelar</button>
+        </div>
+      </div>
+    </div>cdc
+  </div>
+  <footer>
+    <div class="footer-drivenEats">
+      <div class="footer-text" onclick="telaConfirmarPedidoBonus()">
+        <button data-test="order-btn" disabled=true class="botao-confirma">Selecione os 3 itens para fechar o pedido</button>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>

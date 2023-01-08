@@ -1,0 +1,344 @@
+body {
+    background-color:  #E5E5E5;
+    position: relative;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*pode ser transparent também*/
+  }
+
+/*----------HEAD-----------*/
+
+.drivenEats {
+    width: 414px;
+    height: 92px;
+    top: 0;
+    background-color: #CF2B2B;
+    position: fixed;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.title {
+    width: 248px;
+    height: 44px;
+    margin-top: 8px;
+    margin-left: 21px;
+    color: #FFFFFF;
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    font-weight: 400;
+}
+
+.subtitle {
+    height: 17px;
+    width: 226px;
+    margin-top: 5px;
+    margin-left: 21px;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+
+/*------PRATOS----------*/
+
+.title-prato {
+    height: 25px;
+    width: 250px;
+    margin-left: 19px;
+    margin-top: 123px;
+    color: #333333;
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.pratos {
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none
+    
+}
+
+.pratos::-webkit-scrollbar{
+    display: none;
+}
+
+
+.prato-principal1, .prato-principal2, .prato-principal3 {
+    background-color: #FFFFFF;
+    height: 216px;
+    width: 172px;
+    margin-left: 19px;
+    margin-top: 17px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow ease 0.3s, transform ease 0.3s;
+    
+}
+
+.prato-principal1.selecionado, .prato-principal2.selecionado, .prato-principal3.selecionado, .bebida1.selecionado, .bebida2.selecionado, .bebida3.selecionado, .sobremesa1.selecionado, .sobremesa2.selecionado, .sobremesa3.selecionado {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+    
+}
+
+
+.bebida1, .bebida2, .bebida3, .sobremesa1, .sobremesa2, .sobremesa3 {
+    background-color: #FFFFFF;
+    height: 202px;
+    width: 172px;
+    margin-left: 19px;
+    margin-top: 17px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow ease 0.3s, transform ease 0.3s;
+}
+
+.prato-div {
+    position: relative;
+}
+
+
+.prato-div img {
+    height: 87px;
+    width: 144px;
+    border-radius: 4px;
+    margin-top: 18px;
+    margin-left: 14px;
+    margin-right: 14px;
+
+}
+
+
+.descricao-prato {
+    width: 144px;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.descricao-prato h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: #333333;
+}
+
+.descricao-prato p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 17px;
+    margin-top: 4px;
+    margin-bottom: 5px;
+}
+
+.descricao-prato h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    
+}
+
+.descricao-prato ion-icon {
+    margin-left: 128px;
+    font-size: 17px;
+    color: #32B72F;
+    position: absolute;
+    bottom: 22px;
+    transition: box-shadow ease 0.3s, transform ease 0.3s;
+    visibility: hidden;
+    
+}
+
+.icon.selecionado {
+    visibility: visible;
+    transition: box-shadow ease 0.3s, transform ease 0.3s;
+}
+
+.title-prato2 {
+    height: 25px;
+    width: 250px;
+    margin-left: 19px;
+    margin-top: 27px;
+    color: #333333;
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.title-prato3 {
+    height: 25px;
+    width: 320px;
+    margin-left: 19px;
+    margin-top: 27px;
+    color: #333333;
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+/*--------FOOTER---------*/
+
+footer {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 92px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:disabled {
+    background-color:#CBCBCB;
+    height: 61px;
+    width: 350px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: #FFFFFF;
+    border-style: none;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.footer-text p {
+    width: 200px;
+    margin: auto;
+}
+
+
+.footer-text.ativado {
+    background-color: #32B72F;
+    height: 61px;
+    width: 350px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.footer-text.ativado p {
+    position: fixed;
+
+}
+
+
+.container {
+    margin-bottom: 100px;
+}
+
+/***********TELA BONUS***********/
+
+.hidden {
+    visibility: hidden;
+}
+
+.telaConfirmaPedido {
+    display: flex;
+    
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.9);
+    top:0;
+    
+}
+
+.enviarPedidos {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    background-color: #50D074;
+    border-radius: 9px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enviarPedidos h3 {
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.confirmaPrato, .confirmaBebida, .confirmaSobremesa {
+    width: 290px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.confirmaTotal {
+    width: 290px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.botaoConfirmaBonus {
+    background-color: #FFFFFF;
+    height: 52px;
+    width: 300px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: #50D074;
+    font-weight: 700;
+    border: none;
+}
+
+.cancelarPedido {
+    width: 300px;
+    background-color: #50D074;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+}
