@@ -88,5 +88,71 @@ function selecionarSobremesa(botaoSobremesa){
 }
 
 
+/***********BOTAO FINALIZAR PEDIDO - IR TELA BONUS************ */
+
+function continuar() {
+    let totalPratos = document.getElementsByClassName('selecionado').length    
+    let botaoConfirma = document.querySelector('.footer-text button')
+    
+    if(totalPratos === 6) {
+       document.querySelector('.footer-text').classList.add('ativado')
+       document.querySelector('.footer-text').innerHTML = 'Fechar Pedido'       
+        botaoConfirma.disable = false;
+        
+    }
+
+}
+
+/********TELA BONUS - CONFIRMAR PEDIDO******** */
+
+function telaConfirmarPedidoBonus() {
+    /****PRATO*****/
+
+    const nomePratoPrincipal = document.querySelector(".nomePrato")
+    nomePratoPrincipal.innerHTML = `${prato}`
+
+    const precoPratoFinal = document.querySelector(".precoPrato")
+    const precoPratoPrincipal = precoPrato.replace("R$", "").replace("," , ".")
+
+    precoPratoFinal.innerHTML = `${precoPratoPrincipal.replace(".", ",")}`
+
+     /****BEBIDA****/
+
+    const nomeBebidaPrincipal = document.querySelector(".nomeBebida")
+    nomeBebidaPrincipal.innerHTML = `${bebida}`
+
+    const precoBebidaFinal = document.querySelector(".precoBebida")
+    const precoBebidaPrincipal = precoBebida.replace("R$", "").replace("," , ".")
+
+    precoBebidaFinal.innerHTML = `${precoBebidaPrincipal.replace(".", ",")}`
+
+     /****SOBREMESA*****/
+
+    const nomeSobremesaPrincipal = document.querySelector(".nomeSobremesa")
+    nomeSobremesaPrincipal.innerHTML = `${sobremesa}`
+
+    const precoSobremesaFinal = document.querySelector(".precoSobremesa")
+    const precoSobremesaPrincipal = precoSobremesa.replace("R$", "").replace("," , ".")
+
+    precoSobremesaFinal.innerHTML = `${precoSobremesaPrincipal.replace(".", ",")}`
+
+    /*****SOMA TOTAL******/
+    precoTotal = ((Number(precoBebidaPrincipal) + Number(precoPratoPrincipal) + Number(precoSobremesaPrincipal)).toFixed(2)).replace("." , ",")
+    const precoTotalPedidoBonus = document.querySelector(".precoTotalPedido")
+    precoTotalPedidoBonus.innerHTML = "R$ " + precoTotal
+
+
+
+
+    const telaBonus = document.querySelector('.telaConfirmaPedido')
+    telaBonus.classList.remove('hidden');
+}
+
+function botaoCancelarPedido() {
+    const cancelarPedido = document.querySelector('.telaConfirmaPedido')
+    cancelarPedido.classList.add('hidden')
+    console.log(cancelarPedido)
+}
+
 
 
