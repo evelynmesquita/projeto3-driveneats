@@ -154,5 +154,26 @@ function botaoCancelarPedido() {
     console.log(cancelarPedido)
 }
 
+function finalizarPedido() {
+    
+    let nome = prompt('Digite seu nome:');
+    let endereco = prompt('Digite seu endereço:');   
 
+
+
+    let mensagem = `Olá, gostaria de fazer o pedido:
+               - Prato: ${prato}
+               - Bebida: ${bebida}
+               - Sobremesa: ${sobremesa}
+               Total: R$ ${precoTotal.replace(".", ",")}`;
+
+    let mensagem2 = ` - Nome: ${nome}
+                      - Endereço: ${endereco}`;  
+
+                  
+    mensagem = encodeURIComponent(mensagem)
+    mensagem2 = encodeURIComponent(mensagem2)
+
+    window.open("https://wa.me/5591999999999?text=" + mensagem + mensagem2);
+}
 
