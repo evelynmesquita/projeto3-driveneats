@@ -219,14 +219,15 @@ button:disabled {
     padding-right: 80px;
 }
 
+
 .footer-text p {
     width: 200px;
     margin: auto;
 }
 
 
-.footer-text.ativado {
-    background-color: #32B72F;
+.footer-text button {
+    background-color: #CBCBCB;
     height: 61px;
     width: 350px;
     border-radius: 50px;
@@ -239,6 +240,11 @@ button:disabled {
     text-align: center;
     color: #FFFFFF;
     font-weight: 700;
+}
+
+.habilitado {
+    background-color: #32B72F!important;
+    border-style: none;
 }
 
 .footer-text.ativado p {
@@ -255,6 +261,10 @@ button:disabled {
 
 .hidden {
     visibility: hidden;
+}
+
+.hideButton {
+   display: none!important; 
 }
 
 .telaConfirmaPedido {

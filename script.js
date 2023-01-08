@@ -92,12 +92,12 @@ function selecionarSobremesa(botaoSobremesa){
 
 function continuar() {
     let totalPratos = document.getElementsByClassName('selecionado').length    
-    let botaoConfirma = document.querySelector('.footer-text button')
+    let botaoDesativado = document.querySelector('.botao-confirma')
+    let botaoAtivo = document.querySelector('.habilitado')
     
     if(totalPratos === 6) {
-       document.querySelector('.footer-text').classList.add('ativado')
-       document.querySelector('.footer-text').innerHTML = 'Fechar Pedido'       
-        botaoConfirma.disable = false;
+       botaoDesativado.classList.add('hideButton')
+       botaoAtivo.classList.remove('hideButton')
         
     }
 
